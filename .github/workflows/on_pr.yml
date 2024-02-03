@@ -3,6 +3,11 @@ on:
     branches:
       - main
 
+permissions:
+  checks: write
+  contents: write
+  issues: write
+  pull-requests: write
 
 jobs:
   build:
@@ -16,9 +21,10 @@ jobs:
       with:
         node-version: '20'
     - run: npm ci
-    - run: npx textlint ./contents/**/*.md >> ./.textlint.log
-    - if: ${{ failure() }}
-      run: gh pr comment --body-file ./.textlint.log "${URL}"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        URL: ${{ github.event.pull_request.html_url }}
+    - uses: tsuyoshicho/action-textlint@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        reporter: github-pr-review
+        level: warning
+        textlint_flags: "./articles/**/*.md"
+        fail_on_error: true
