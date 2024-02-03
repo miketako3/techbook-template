@@ -1,0 +1,16 @@
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: TechBooster/ReVIEW-build-artifact-action@master
+    - uses: actions/upload-artifact@v3
+      with:
+        name: Output documents
+        path: ./articles/*.pdf

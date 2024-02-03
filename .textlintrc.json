@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    "review"
+  ],
+  "filters": {
+    "comments": true
+  },
+  "rules": {
+    "preset-ja-technical-writing": true,
+    "preset-ja-spacing": true,
+    "ja-no-redundant-expression": true,
+    "no-doubled-joshi": true
+  }
+}
