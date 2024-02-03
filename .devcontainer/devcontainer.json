@@ -1,14 +1,22 @@
 {
 	"image": "vvakame/review:5.8",
-	"settings": {
-		"editor.wordWrap": "on"
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"yuqquu.review-starter-syntax-highlight",
+				"GitHub.copilot-chat",
+				"MS-CEINTL.vscode-language-pack-ja",
+				"GitHub.copilot",
+				"github.vscode-github-actions"
+			],
+			"settings": {
+				"editor.wordWrap": "on"
+			}
+		}
 	},
-	"extensions": [
-		"yuqquu.review-starter-syntax-highlight"
-	],
 	"postCreateCommand": [
 		"npm",
-		"ci",
+		"ci"
 	],
 	"remoteUser": "root"
 }
