@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: TechBooster/ReVIEW-build-artifact-action@master
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: Output documents
         path: ./articles/*.pdf
