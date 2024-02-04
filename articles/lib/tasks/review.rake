@@ -69,7 +69,7 @@ end
 
 desc 'preproc all'
 task :preproc do
-  Dir.glob('**/*.re').each do |file|
+  Dir.glob('*.re').each do |file|
     sh "review-preproc --replace #{file}"
   end
 end
