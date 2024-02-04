@@ -1,10 +1,10 @@
 PREDEF:
-  - scripts/preface.re
+  - body/preface.re
 
 CHAPS:
-  - scripts/article.re
+  - body/article.re
 
 APPENDIX:
 
 POSTDEF:
-  - scripts/contributors.re
+  - body/contributors.re
