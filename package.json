@@ -28,7 +28,8 @@
     "web": "grunt web",
     "idgxml": "grunt idgxmlmaker",
     "vivliostyle": "grunt vivliostyle",
-    "test": "npm run html"
+    "test": "npm run html",
+    "lint": "npx textlint ./**/*.re"
   },
   "devDependencies": {
     "grunt": "^1.5.3",
