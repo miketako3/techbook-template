@@ -1,21 +1,21 @@
 {
-  "name": "review-template",
-  "version": "0.0.2",
+  "name": "techbook-template",
+  "version": "0.0.1",
   "private": true,
   "description": "",
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TechBooster/ReVIEW-Template.git"
+    "url": "git+https://github.com/miketako3/techbook-template.git"
   },
-  "author": "",
+  "author": "@miketako3",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TechBooster/ReVIEW-Template/issues"
+    "url": "https://github.com/miketako3/techbook-template/issues"
   },
-  "homepage": "https://github.com/TechBooster/ReVIEW-Template#readme",
+  "homepage": "https://github.com/miketako3/techbook-template#readme",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=20.0.0"
   },
   "scripts": {
     "global-bundler": "gem install bundler",
@@ -28,7 +28,8 @@
     "web": "grunt web",
     "idgxml": "grunt idgxmlmaker",
     "vivliostyle": "grunt vivliostyle",
-    "test": "npm run html"
+    "test": "npm run html",
+    "lint": "npx textlint ./**/*.re"
   },
   "devDependencies": {
     "grunt": "^1.5.3",
