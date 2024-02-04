@@ -21,10 +21,11 @@ jobs:
       with:
         node-version: '20'
     - run: npm ci
+    - uses: TechBooster/ReVIEW-build-artifact-action@master
     - uses: tsuyoshicho/action-textlint@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: github-pr-review
         level: warning
-        textlint_flags: "./articles/**/*.md"
+        textlint_flags: "./articles/**/*.re"
         fail_on_error: true
