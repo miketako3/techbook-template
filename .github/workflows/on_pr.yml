@@ -26,5 +26,5 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: github-pr-review
         level: warning
-        textlint_flags: "./articles/**/*.md"
+        textlint_flags: "./articles/**/*.re"
         fail_on_error: true
