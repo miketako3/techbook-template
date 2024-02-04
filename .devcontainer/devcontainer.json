@@ -7,7 +7,8 @@
 				"GitHub.copilot-chat",
 				"MS-CEINTL.vscode-language-pack-ja",
 				"GitHub.copilot",
-				"github.vscode-github-actions"
+				"github.vscode-github-actions",
+				"tomoki1207.pdf"
 			],
 			"settings": {
 				"editor.wordWrap": "on"
