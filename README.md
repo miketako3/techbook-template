@@ -1,4 +1,4 @@
-# Teckbook Template
+# Techbook Template
 
 このリポジトリはRe:VIEW用の[TechBooster製テンプレート](https://github.com/TechBooster/ReVIEW-Template)のカスタム版。
 
