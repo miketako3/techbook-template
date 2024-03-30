@@ -1,10 +1,10 @@
 PREDEF:
-  - preface.md
+  - preface.re
 
 CHAPS:
-  - article.md
+  - article.re
 
 APPENDIX:
 
 POSTDEF:
-  - contributors.md
+  - contributors.re
