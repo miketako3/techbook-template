@@ -2,7 +2,7 @@
 
 # Setup
 bundle install
-npm install
+npm ci
 mkdir -p out
 
 # Generate Paper PDF
