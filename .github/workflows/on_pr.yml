@@ -15,7 +15,6 @@ jobs:
     steps:
     - name: checkout source
       uses: actions/checkout@v4
-# check textlint
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
