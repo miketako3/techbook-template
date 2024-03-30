@@ -20,7 +20,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '20'
-    - run: ./scripts/build.sh
     - uses: tsuyoshicho/action-textlint@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
