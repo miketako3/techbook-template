@@ -9,7 +9,6 @@ const bookConfig = yaml.safeLoad(fs.readFileSync(`${articles}/config.yml`, "utf8
 const reviewPrefix = process.env["REVIEW_PREFIX"] || "bundle exec ";
 const reviewPostfix = process.env["REVIEW_POSTFIX"] || "";             // REVIEW_POSTFIX="-peg" npm run pdf とかするとPEGでビルドできるよ
 const reviewConfig = process.env["REVIEW_CONFIG_FILE"] || "config.yml"; // REVIEW_CONFIG_FILE="config-ebook.yml" npm run pdf のようにすると別のconfigでビルドできるよ
-const reviewPreproc = `${reviewPrefix}review-preproc${reviewPostfix}`;
 const reviewCompile = `${reviewPrefix}review-compile${reviewPostfix}`;
 const reviewPdfMaker = `${reviewPrefix}rake pdf ${reviewPostfix}`;
 const reviewEpubMaker = `${reviewPrefix}rake epub ${reviewPostfix}`;
@@ -34,14 +33,6 @@ module.exports = grunt => {
 			}
 		},
 		shell: {
-			preprocess: {
-				options: {
-					execOptions: {
-						cwd: articles,
-					}
-				},
-				command: `${reviewPreproc} -r --tabwidth=2 *.re`
-			},
 			compile2text: {
 				options: {
 					execOptions: {
@@ -126,7 +117,7 @@ module.exports = grunt => {
 	});
 
 	function generateTask(target) {
-		return ["clean", "shell:preprocess", `shell:compile2${target}`];
+		return ["clean", `shell:compile2${target}`];
 	}
 
 	grunt.registerTask(
