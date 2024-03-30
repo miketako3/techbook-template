@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - run: ./scripts/build.sh
+    - run: docker compose up
     - uses: actions/upload-artifact@v4
       with:
         name: Output documents
