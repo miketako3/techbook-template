@@ -15,17 +15,15 @@ jobs:
     steps:
     - name: checkout source
       uses: actions/checkout@v4
-# check textlint
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '20'
-    - run: npm ci
-    - uses: TechBooster/ReVIEW-build-artifact-action@master
+    - run: docker compose up
     - uses: tsuyoshicho/action-textlint@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         reporter: github-pr-review
         level: warning
-        textlint_flags: "./articles/**/*.re"
+        textlint_flags: "./articles/main/**/*.md"
         fail_on_error: true

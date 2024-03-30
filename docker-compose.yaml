@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  app:
+    image: vvakame/review:5.8
+    volumes:
+      - .:/book
+    working_dir: /book
+    command: ./scripts/build.sh

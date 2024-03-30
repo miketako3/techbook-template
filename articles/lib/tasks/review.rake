@@ -67,13 +67,6 @@ task :html_all do
   build_all('html')
 end
 
-desc 'preproc all'
-task :preproc do
-  Dir.glob('*.re').each do |file|
-    sh "review-preproc --replace #{file}"
-  end
-end
-
 desc 'generate PDF and EPUB file'
 task all: %i[pdf epub]
 

@@ -3,14 +3,13 @@ on:
     branches:
       - main
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: TechBooster/ReVIEW-build-artifact-action@master
+    - run: docker compose up
     - uses: actions/upload-artifact@v4
       with:
         name: Output documents
-        path: ./articles/*.pdf
+        path: ./out/*.pdf

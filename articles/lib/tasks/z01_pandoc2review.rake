@@ -64,7 +64,8 @@ task :pandoc2review do
     catalog = yaml_load_file_compatible('catalog.yml')
     %w(PREDEF CHAPS APPENDIX POSTDEF).each do |block|
       if catalog[block].kind_of?(Array)
-        catalog[block].each do |ch|
+        catalog[block].each do |c|
+          ch = 'main/' + c
           if ch.kind_of?(Hash) # Parts
             ch.each_pair do |k, v|
               make_mdre(k, p2r, path)
