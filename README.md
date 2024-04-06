@@ -22,7 +22,7 @@
 
 ## ローカルでのビルド
 
-以下を実行すると、`articles/`下にPDFが生成される。
+以下を実行すると、`out/`下にPDFが生成される。
 
 ```shell
 $ docker-compose up
