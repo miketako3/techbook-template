@@ -1,1 +1,11 @@
 % for user-defined macro
+\makeatletter
+
+% 引用の調整
+\usepackage{framed}
+\renewenvironment{quote}
+  {\begin{leftbar}\list{}{\leftmargin=0cm \rightmargin=0cm \itemindent=1em}
+   \item\relax\centering}
+  {\endlist\end{leftbar}}
+
+\makeatother
