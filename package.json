@@ -29,9 +29,11 @@
     "idgxml": "grunt idgxmlmaker",
     "vivliostyle": "grunt vivliostyle",
     "test": "npm run html",
-    "lint": "npx textlint ./**/*.re"
+    "lint": "npx textlint ./**/*.re",
+    "mermaid": "for file in $(find ./mermaid -name \"*.mmd\" -type f); do mmdc -i $file -o ./articles/images/$(basename $file .mmd).png; done"
   },
   "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^10.8.0",
     "grunt": "^1.5.3",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^2.0.0",
